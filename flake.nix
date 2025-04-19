@@ -25,7 +25,10 @@ outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }: {
 			{
 				home-manager.useGlobalPkgs = true;
 				home-manager.useUserPackages = true;
-				home-manager.users.jacob = import ./modules/common/home.nix;
+				home-manager.users.jacob = {pkgs, ...}: import ./modules/common/home.nix {
+					inherit pkgs;
+					isDarwin = pkgs.stdenv.hostPlatform.isDarwin;
+				};
 			}
 		];
 	};
@@ -39,7 +42,10 @@ outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }: {
 				
 				home-manager.useGlobalPkgs = true;
 				home-manager.useUserPackages = true;
-				home-manager.users.jacob = import ./modules/common/home.nix;
+				home-manager.users.jacob = {pkgs, ...}: import ./modules/common/home.nix {
+					inherit pkgs;
+					isDarwin = pkgs.stdenv.hostPlatform.isDarwin;
+				};
 			}
 		];
 	};
