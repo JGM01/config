@@ -8,13 +8,10 @@
 		pkgs.neovim
 		pkgs.obsidian
 	];
-	home.homeDirectory = let
-      		isLinux = pkgs.stdenv.hostPlatform.isLinux;
-      		isDarwin = pkgs.stdenv.hostPlatform.isDarwin;
-    		in 
-			if isDarwin then "/Users/jacob"
-      			else if isLinux then "/home/jacob"
-      			else throw "Unsupported platform: neither Linux nor Darwin";
+
+	home.homeDirectory = if builtins.elem builtins.currentSystem ["aarch64-darwin" "x86_64-darwin"] 
+                         then "/Users/jacob"
+                         else "/home/jacob";
 	
 	home.stateVersion = "24.05";
 }
