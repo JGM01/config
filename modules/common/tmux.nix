@@ -1,3 +1,5 @@
-{pkgs, ...}: {
-	enable = true;
+{pkgs, ...}: {	
+	programs.tmux = {
+		enable = true;
+	};
 }
