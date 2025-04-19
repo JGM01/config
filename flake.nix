@@ -28,7 +28,7 @@ outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }: {
 				home-manager.users.jacob = {pkgs, ...}: {
 					imports = [./modules/common/home.nix];
 					home.username = "jacob";
-					home.homeDirectory="/Users/jacob";
+					home.homeDirectory = builtins.trace "Platform isDarwin: ${toString pkgs.stdenv.hostPlatform.isDarwin}" "/Users/jacob";
 				};
 			}
 		];
@@ -46,7 +46,7 @@ outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }: {
 				home-manager.users.jacob = {pkgs, ...}: {
 					imports = [./modules/common/home.nix];
 					home.username = "jacob";
-					home.homeDirectory="/home/jacob";
+					home.homeDirectory = builtins.trace "Platform isDarwin: ${toString pkgs.stdenv.hostPlatform.isDarwin}" "/home/jacob";
 				};
 			}
 		];
