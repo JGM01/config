@@ -9,7 +9,6 @@
     		casks = [ 
 			"obsidian"
 			"ghostty"
-			"obs"
 			"discord"
     		];
 	};

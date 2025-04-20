@@ -6,10 +6,8 @@
 
 	home.packages = [
 		pkgs.neovim
-		pkgs.discord
 		pkgs.btop
 		pkgs.neofetch
-		pkgs.obsidian
 	];
 
 	home.stateVersion = "24.05";
