@@ -6,6 +6,9 @@
 
 	home.packages = [
 		pkgs.neovim
+		pkgs.discord
+		pkgs.dolphin-emu
+		pkgs.btop
 		pkgs.obsidian
 	];
 
