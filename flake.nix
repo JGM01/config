@@ -21,6 +21,7 @@ outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }: {
 				system.configurationRevision = self.rev or self.dirtyRev or null;
 			})
 			./modules/darwin/system.nix
+			./modules/darwin/brew.nix
 			home-manager.darwinModules.home-manager 
 			{
 				users.users.jacob.home = "/Users/jacob";
@@ -29,7 +30,6 @@ outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }: {
 				home-manager.users.jacob = {
 					imports = [
 						./modules/common/home.nix
-						./modules/darwin/macos-spotlight-fix.nix
 					];
 				};
 			}
