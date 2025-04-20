@@ -17,7 +17,7 @@ inputs = {
     	};
 };
 
-outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }: {
+outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, fenix, ... }: {
 
 	darwinConfigurations."trollbook" = nix-darwin.lib.darwinSystem {
 		modules = [
