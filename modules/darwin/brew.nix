@@ -7,12 +7,8 @@
       			brewfile = true;
     		};
     		casks = [ 
-      			"raycast"
-    		];
-    		taps = [
-      			"homebrew/core"
-      			"homebrew/cask"
-      			"homebrew/cask-fonts"
+			"obsidian"
+			"ghostty"
     		];
 	};
 }
