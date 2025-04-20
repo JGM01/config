@@ -1,13 +1,14 @@
-{pkgs, isDarwin, ...}: {
+{pkgs, ...}: {
 	imports = [
 		./git.nix
 		./tmux.nix
+		./rust.nix
 	];
 
 	home.packages = [
 		pkgs.neovim
 		pkgs.btop
-		pkgs.neofetch
+		pkgs.neofetch	
 	];
 
 	home.stateVersion = "24.05";
