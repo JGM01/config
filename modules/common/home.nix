@@ -2,7 +2,6 @@
 	imports = [
 		./git.nix
 		./tmux.nix
-		./rust.nix
 	];
 
 	home.packages = [
