@@ -1,5 +1,5 @@
 { pkgs, fenix, ... }: {
 	home.packages = with pkgs; [
-		fenix.stable.toolchain
+		fenix.complete.toolchain
 	];
 }
