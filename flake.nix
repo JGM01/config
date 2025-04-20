@@ -11,13 +11,9 @@ inputs = {
 		url = "github:nix-community/home-manager";
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
-	fenix = {
-      		url = "github:nix-community/fenix";
-      		inputs.nixpkgs.follows = "nixpkgs";
-    	};
 };
 
-outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, fenix, ... }: {
+outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }: {
 
 	darwinConfigurations."trollbook" = nix-darwin.lib.darwinSystem {
 		modules = [
@@ -36,7 +32,6 @@ outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, fenix, ... }: {
 						./modules/common/home.nix
 					];
 				};
-				home-manager.extraSpecialArgs = { inherit fenix; };
 			}
 		];
 	};
@@ -51,7 +46,6 @@ outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, fenix, ... }: {
 				home-manager.useGlobalPkgs = true;
 				home-manager.useUserPackages = true;
 				home-manager.users.jacob = import ./modules/common/home.nix;
-				home-manager.extraSpecialArgs = { inherit fenix; };
 			}
 		];
 	};
