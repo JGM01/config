@@ -9,6 +9,7 @@
     		casks = [ 
 			"obsidian"
 			"ghostty"
+			"obs"
     		];
 	};
 }
