@@ -10,6 +10,7 @@
 			"obsidian"
 			"ghostty"
 			"obs"
+			"discord"
     		];
 	};
 }
