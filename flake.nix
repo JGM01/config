@@ -26,7 +26,12 @@ outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }: {
 				users.users.jacob.home = "/Users/jacob";
 				home-manager.useGlobalPkgs = true;
 				home-manager.useUserPackages = true;
-				home-manager.users.jacob = import ./modules/common/home.nix;
+				home-manager.users.jacob = {
+					imports = [
+						./modules/common/home.nix
+						./modules/darwin/macos-spotlight-fix.nix
+					];
+				};
 			}
 		];
 	};
