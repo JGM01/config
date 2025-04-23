@@ -32,7 +32,7 @@
 	];
 
 	programs.nushell = {
-		enabled = true;
+		enable = true;
 		configFile.text = 
 		''
       		alias ls = eza
