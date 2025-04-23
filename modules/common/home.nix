@@ -39,6 +39,7 @@
       # Nix path
       $env.NIX_PATH = [
         $"darwin-config=($env.HOME)/.nixpkgs/darwin-configuration.nix"
+	$"nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixpkgs"
         "/nix/var/nix/profiles/per-user/root/channels"
       ]
 
