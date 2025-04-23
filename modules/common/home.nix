@@ -7,7 +7,10 @@
 	home.packages = [
 		pkgs.neovim
 		pkgs.btop
-		pkgs.neofetch	
+		pkgs.neofetch
+		pkgs.rustup
+		pkgs.uv
+		pkgs.bun
 	];
 
 	home.stateVersion = "24.05";
