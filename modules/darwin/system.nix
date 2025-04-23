@@ -38,8 +38,8 @@
 	system.defaults.NSGlobalDomain = {
 		AppleShowAllFiles = true;
 	    	AppleFontSmoothing = 2;
-	    	AppleInterfaceStyleSwitchesAutomatically = true;
 	    	AppleShowAllExtensions = true;
+		AppleInterfaceStyle = "Dark";
 	    	AppleShowScrollBars = "Automatic";
 	    	AppleScrollerPagingBehavior = true;
 	    	"com.apple.mouse.tapBehavior" = 1;
