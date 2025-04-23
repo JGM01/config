@@ -62,7 +62,7 @@
 	      		{ app = "/System/Applications/System Settings.app"; }
 	      		{ app = "/Applications/Safari.app"; }
 	      		{ app = "/System/Applications/Mail.app"; }
-	      		{ app = "/System/Applications/Discord.app"; }
+	      		{ app = "/Applications/Discord.app"; }
 	      		{ app = "/System/Applications/Messages.app"; }
 	      		{ app = "/Applications/Ghostty.app"; }
 	      		{ app = "/System/Applications/iPhone Mirroring.app"; }
