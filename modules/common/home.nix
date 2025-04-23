@@ -16,7 +16,7 @@
 		pkgs.ripgrep # grep
 		pkgs.bat # cat
 		pkgs.fd # find
-		pkgs.exa # ls
+		pkgs.eza # ls
 		pkgs.zoxide # cd
 		pkgs.duf # du
 		pkgs.procs # ps
