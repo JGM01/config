@@ -69,6 +69,11 @@
 	    	];
 	};
 
+	environment.shells = with pkgs; [ bash zsh nushell ];
+	users.users.jacob = {
+    		shell = pkgs.nushell;
+  	};
+
 	system.stateVersion = 6;
 
 	nixpkgs.hostPlatform = "aarch64-darwin";

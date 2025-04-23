@@ -11,6 +11,7 @@
 		pkgs.rustup
 		pkgs.uv
 		pkgs.bun
+		pkgs.nushell
 	];
 
 	home.stateVersion = "24.05";
