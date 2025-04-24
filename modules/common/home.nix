@@ -29,7 +29,6 @@
 		pkgs.htop # not b(loat)top
 		pkgs.hexyl # hex viewer
 
-		pkgs.starship # everyone else is doing it idk
 	];
 
 	programs.zsh = {
@@ -47,10 +46,14 @@
     		initExtra = 
 		''
       		eval "$(zoxide init zsh)"
-
-		eval "$(starship init zsh)"
     		'';
   	};
+
+	programs.zoxide = {
+    		enable = true;
+    		enableZshIntegration = true;
+  	};
+
 
 
 	home.stateVersion = "24.05";
