@@ -39,7 +39,7 @@
     		syntaxHighlighting.enable = true;  
 
     		shellAliases = {
-			cd = "zoxide";
+			cd = "z";
 			ls = "eza";
 			grep = "ripgrep";
     		};
