@@ -5,8 +5,8 @@
 
   	nix.settings.experimental-features = "nix-command flakes";
 	
-	security.pam.enableSudoTouchIdAuth = true;
-	
+	security.pam.services.sudo_local.touchIdAuth = true;
+
   	system.keyboard.enableKeyMapping = true;
 
   	system.defaults.SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
