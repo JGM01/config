@@ -11,7 +11,6 @@
 		pkgs.rustup
 		pkgs.uv
 		pkgs.bun
-		pkgs.nushell
 
 		pkgs.ripgrep # grep
 		pkgs.bat # cat
@@ -29,16 +28,30 @@
 		pkgs.yq # yaml parsing
 		pkgs.htop # not b(loat)top
 		pkgs.hexyl # hex viewer
+
+		pkgs.starship # everyone else is doing it idk
 	];
 
-	programs.nushell = {
-		enable = true;
-		configFile.text = 
+	programs.zsh = {
+    		enable = true;
+    		enableCompletion = true;  
+    		autosuggestion.enable = true;  
+    		syntaxHighlighting.enable = true;  
+
+    		shellAliases = {
+			cd = "zoxide";
+			ls = "eza";
+			grep = "ripgrep";
+    		};
+
+    		initExtra = 
 		''
-      		alias ls = eza
-      		alias cd = z
-		'';
-	};
+      		eval "$(zoxide init zsh)"
+
+		eval "$(starship init zsh)"
+    		'';
+  	};
+
 
 	home.stateVersion = "24.05";
 }

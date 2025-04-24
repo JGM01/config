@@ -4,7 +4,9 @@
 	nixpkgs.config.allowUnfree = true;
 
   	nix.settings.experimental-features = "nix-command flakes";
-
+	
+	security.pam.enableSudoTouchIdAuth = true;
+	
   	system.keyboard.enableKeyMapping = true;
 
   	system.defaults.SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
