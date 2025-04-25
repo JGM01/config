@@ -7,6 +7,7 @@
       			brewfile = true;
     		};
     		casks = [ 
+            "figma"
 			"obsidian"
 			"ghostty"
 			"discord"
