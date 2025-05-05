@@ -11,6 +11,7 @@
 			"obsidian"
 			"ghostty"
 			"discord"
+            "transmission"
     		];
 	};
 }
